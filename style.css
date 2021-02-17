@@ -1,0 +1,47 @@
+main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.t1 {
+    background-color: red;
+}
+.t2 {
+    background-color: rebeccapurple;
+}
+.t3 {
+    background-color: blue;
+}
+.t4 {
+    background-color: yellow;
+}
+.t5 {
+    background-color: green;
+}
+.t6 {
+    background-color: orangered;
+}
+.t7 {
+    background-color: palevioletred;
+}
+.t8 {
+    background-color: aqua;
+}
+.t9 {
+    background-color: yellow;
+}
+.t10 {
+    background-color: green;
+}
+.t11 {
+    background-color: orangered;
+}
+.t12 {
+    background-color: palevioletred;
+}
+
+
+
