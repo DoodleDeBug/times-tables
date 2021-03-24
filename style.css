@@ -2,12 +2,33 @@ body{
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+    background-color: aqua;
 }
 
 main {
+    background-color: pink;
     display: grid;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 50px;
+    column-gap: 50px;
+    place-items: center center;
+
     
+}
+
+.tile {
+    border-radius: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: center;
+    place-content: center center;
+
+}
+
+.cardTitle {
+    justify-self: center;
+    align-self: center;
 }
 
 .t1 {
