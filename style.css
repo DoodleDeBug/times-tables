@@ -1,19 +1,17 @@
 body{
     margin: 0;
     box-sizing: border-box;
-    padding: 10px 150px;
+    padding: 0;
 }
 
 main {
-    height: 100vh;
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     
 }
 
 .t1 {
     background-color: red;
-    display: flex;
 }
 .t2 {
     background-color: rebeccapurple;
@@ -47,19 +45,4 @@ main {
 }
 .t12 {
     background-color: palevioletred;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.answer li{
-    padding-left: 5px;
-}
-
-.box {
-    min-width: 200px;
-    margin: 10px;
-    padding: 0px 20px;
 }
