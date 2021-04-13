@@ -38,6 +38,10 @@ h1 {
     
 }
 
+.t2 .cardTitle, .t9 .cardTitle, .t11 .cardTitle {
+    color: slategrey;
+}
+
 .t1 {
     background-color: red;
 }
