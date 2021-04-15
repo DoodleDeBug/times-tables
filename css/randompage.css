@@ -4,6 +4,7 @@
 html {
     min-height: 100%;
  }
+
 body{
     margin: 0;
     box-sizing: border-box;
@@ -31,6 +32,7 @@ h2 {
 .sub-border{
     background-color: white;
     border-radius: 30px;
+    
 }
 .subtitle {
     background: -webkit-linear-gradient(90deg,#FF922D, #ff4bb4);
@@ -62,6 +64,12 @@ h2 {
     font-family: 'Strait', sans-serif;
 }
 
+footer {
+position: relative;
+bottom: 0;
+}
+
 .home {
     height: 50px;
 }
+
