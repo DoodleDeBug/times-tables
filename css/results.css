@@ -60,6 +60,7 @@ h2 {
 .comments {
     background-color: tomato;
     font-family: 'Space Mono', monospace;
+    margin-top: 50px;
 }
 
 footer {
