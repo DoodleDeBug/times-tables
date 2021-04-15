@@ -1,16 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Potta+One&family=Space+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Strait&display=swap');
 
-body{
+* {
     margin: 0;
-    box-sizing: border-box;
     padding: 0;
+}
+
+html{
+    min-height: 100%;
+}
+
+body{
+    box-sizing: border-box;
     font-family: 'Space Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
-    padding: 50px 250px;
+    padding: 5% 250px;
     text-align: center;
+    overflow:auto;
 }
 
 h1 {
@@ -25,9 +36,12 @@ h1 {
 h2 {
     font-weight: normal;
 }
+.sub-border{
+    background-color: grey;
+    border-radius: 30px;  
+}
 
 .subtitle {
-    background-color: grey;
     border-radius: 30px;
     height: 50px;
     margin: 30px;
@@ -36,16 +50,26 @@ h2 {
     justify-content: center;
     text-decoration: none;
 }
-.questionBox {
+.border{
     background-color: grey;
     border-radius: 30px;
-    height: 300px;
     margin: 30px 25%;
+    padding: 20px;
+}
+
+.questionBox {
+    border-radius: 30px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Strait', sans-serif;
 }
+
+footer {
+    margin-top: auto;
+    padding: 10px;
+   }
 
 .home {
     height: 50px;
