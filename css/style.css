@@ -51,7 +51,7 @@ h1 {
 }
 
 .t1 {
-    background-color: red;
+    background: -webkit-linear-gradient(10deg,#FF922D, #ff4bb4);
 }
 .t2 {
     background-color: #B3E845;
