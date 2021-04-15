@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&family=Space+Mono&display=swap');
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 250px;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Potta One', cursive;
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+.tile {
+    border-radius: 35px;
+    height: 200px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: auto;
+    min-width: 300px;
+}
+
+.cardTitle {
+    color: white;
+    font-family: 'Space Mono', monospace;
+    font-weight: 100;
+    
+}
+
+.t2 .cardTitle, .t9 .cardTitle, .t11 .cardTitle {
+    color: slategrey;
+}
+
+.t1 {
+    background-color: red;
+}
+.t2 {
+    background-color: #B3E845;
+}
+.t3 {
+    background-color: #8A88ED;
+}
+.t4 {
+    background-color:#FF922D;
+}
+.t5 {
+    background-color: #304FBD;
+}
+.t6 {
+    background-color: #FE3131;
+}
+.t7 {
+    background-color: #F34AA5;
+}
+.t8 {
+    background-color: #42E152;
+}
+.t9 {
+    background-color: #2EEAD3;
+}
+.t10 {
+    background-color: #0B177E;
+}
+.t11 {
+    background-color: #FFF628;
+}
+.t12 {
+    background-color: #CD5BF5;
+}
