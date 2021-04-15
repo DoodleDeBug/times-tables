@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Strait&display=swap');
+
+html {
+    min-height: 100%;
+ }
+body{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+    background: -webkit-linear-gradient(-15deg,#FF922D, #ff4bb4);
+}
+
+main {
+    padding: 50px 250px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Potta One', cursive;
+    font-size: 50px;
+    margin-top: 50px;
+    color: white;
+}
+
+h2 {
+    font-weight: normal;
+}
+.sub-border{
+    background-color: white;
+    border-radius: 30px;
+}
+.subtitle {
+    background: -webkit-linear-gradient(90deg,#FF922D, #ff4bb4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 30px;
+    height: 50px;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.border{
+    background-color: white;
+    border-radius: 30px;
+    margin: 30px 25%;
+    padding: 20px;
+}
+
+.questionBox {
+    background: -webkit-linear-gradient(130deg,#FF922D, #ff4bb4);
+    border-radius: 30px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Strait', sans-serif;
+}
+
+.home {
+    height: 50px;
+}
