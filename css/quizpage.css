@@ -6,7 +6,6 @@ body{
     box-sizing: border-box;
     padding: 0;
     font-family: 'Space Mono', monospace;
-    font-weight: 100;
 }
 
 main {
@@ -20,6 +19,9 @@ h1 {
     font-size: 50px;
     margin-top: 50px;
 }
+h2 {
+    font-weight: normal;
+}
 
 .subtitle {
     background-color: grey;
@@ -29,6 +31,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 .questionBox {
     background-color: grey;
