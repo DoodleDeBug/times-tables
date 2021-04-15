@@ -37,11 +37,12 @@ h1 {
 h2 {
     font-weight: normal;
 }
+
 .sub-border{
     background-color: white;
-    border-radius: 30px;
-    
+    border-radius: 30px;  
 }
+
 .subtitle {
     background: -webkit-linear-gradient(90deg,#FF922D, #ff4bb4);
     -webkit-background-clip: text;
@@ -74,10 +75,17 @@ h2 {
 
 footer {
  margin-top: auto;
- padding: 10px;
+ padding: 20px 50px;
 }
 
 .home {
     height: 50px;
 }
 
+.questionNum {
+    display: inline;
+    float: right;
+    font-size: 40px;
+    font-family: 'Space Mono', monospace;
+    color: white;
+}
