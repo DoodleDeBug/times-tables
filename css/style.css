@@ -128,6 +128,7 @@ h1 {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  font-size: 20px;
 }
 
 .questionBox {
@@ -139,6 +140,7 @@ h1 {
   align-items: center;
   justify-content: center;
   font-family: "Strait", sans-serif;
+  font-size: 30px;
 }
 
 footer {
