@@ -29,10 +29,10 @@ while (container.firstChild) { // removes all the tiles
 container.classList.add('quizpage'); // add class to main to apply css
 
 container.appendChild(subtitle)// append subtitle
-subtitle.classList.add('subtitle'); // add class to subtitle to apply css
+subtitle.classList.add('subtitle', 't2'); // add class to subtitle to apply css
 
 container.appendChild(questionBox);// append question box
-questionBox.classList.add('questionBox'); // add class to questionbox to apply css
+questionBox.classList.add('questionBox', 't2'); // add class to questionbox to apply css
 
 body.appendChild(footer);// append footer
 
@@ -40,7 +40,7 @@ footer.appendChild(home); //insert home icon
 home.classList.add('home'); // add class to home to apply css
 home.addEventListener('click', goHome)
 function goHome(){
-    location.href = '/index.html';
+    location.href = '/index.html'; // home button takes you back to index.html w/out js applied yet
  }
 
 footer.appendChild(questionNum) // insert q num
