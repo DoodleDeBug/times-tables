@@ -128,3 +128,19 @@ h1 {
   justify-content: center;
   font-family: "Strait", sans-serif;
 }
+
+footer {
+  margin-top: auto;
+  padding: 20px 50px;
+}
+
+.home {
+  height: 50px;
+}
+
+.questionNum {
+  display: inline;
+  float: right;
+  font-size: 40px;
+  font-family: "Space Mono", monospace;
+}
