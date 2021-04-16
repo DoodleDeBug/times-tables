@@ -40,7 +40,7 @@ footer.appendChild(home); //insert home icon
 home.classList.add('home'); // add class to home to apply css
 home.addEventListener('click', goHome)
 function goHome(){
-    location.href = '/index.html'; // home button takes you back to index.html w/out js applied yet
+    location.href = './index.html'; // home button takes you back to index.html w/out js applied yet
  }
 
 footer.appendChild(questionNum) // insert q num
