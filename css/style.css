@@ -11,6 +11,7 @@ main {
     flex-wrap: wrap;
     padding: 50px 250px;
     gap: 20px;
+    justify-content: center;
 }
 
 a {
