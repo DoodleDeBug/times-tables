@@ -1,89 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Potta+One&family=Space+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&family=Space+Mono&display=swap");
 
-body{
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
+body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 50px 250px;
-    gap: 20px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 250px;
+  gap: 20px;
+  justify-content: center;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 h1 {
-    text-align: center;
-    font-family: 'Potta One', cursive;
-    font-size: 50px;
-    margin-top: 50px;
-    background: -webkit-linear-gradient(10deg,#FF922D, #ff4bb4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-family: "Potta One", cursive;
+  font-size: 50px;
+  margin-top: 50px;
+  background: -webkit-linear-gradient(10deg, #ff922d, #ff4bb4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .tile {
-    border-radius: 35px;
-    height: 200px;
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    flex-basis: auto;
-    min-width: 300px;
+  border-radius: 35px;
+  height: 200px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: auto;
+  min-width: 300px;
 }
 
 .cardTitle {
-    color: white;
-    font-family: 'Space Mono', monospace;
-    font-weight: 100;
-    
+  color: white;
+  font-family: "Space Mono", monospace;
+  font-weight: 100;
 }
 
-.t2 .cardTitle, .t9 .cardTitle, .t11 .cardTitle {
-    color: slategrey;
+.t2 .cardTitle,
+.t9 .cardTitle,
+.t11 .cardTitle {
+  color: slategrey;
 }
 
 .t1 {
-    background: -webkit-linear-gradient(10deg,#FF922D, #ff4bb4);
+  background: -webkit-linear-gradient(10deg, #ff922d, #ff4bb4);
 }
 .t2 {
-    background-color: #B3E845;
+  background-color: #b3e845;
 }
 .t3 {
-    background-color: #8A88ED;
+  background-color: #8a88ed;
 }
 .t4 {
-    background-color:#FF922D;
+  background-color: #ff922d;
 }
 .t5 {
-    background-color: #304FBD;
+  background-color: #304fbd;
 }
 .t6 {
-    background-color: #FE3131;
+  background-color: #fe3131;
 }
 .t7 {
-    background-color: #F34AA5;
+  background-color: #f34aa5;
 }
 .t8 {
-    background-color: #42E152;
+  background-color: #42e152;
 }
 .t9 {
-    background-color: #2EEAD3;
+  background-color: #2eead3;
 }
 .t10 {
-    background-color: #0B177E;
+  background-color: #0b177e;
 }
 .t11 {
-    background-color: #FFF628;
+  background-color: #fff628;
 }
 .t12 {
-    background-color: #CD5BF5;
+  background-color: #cd5bf5;
 }
