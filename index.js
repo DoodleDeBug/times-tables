@@ -13,7 +13,7 @@ let question = questionBox.innerHTML = '2x2';
 const footer = document.createElement('footer'); // create footer
 
 const home = document.createElement('img'); // create home icon
-home.setAttribute('src', 'assets/iconfinder_-_Home-House-_3844470.svg');
+home.setAttribute('src', 'assets/home.svg');
 home.setAttribute('alt', 'Home Icon');
 
 const questionNum = document.createElement('p'); // create q num tracker
