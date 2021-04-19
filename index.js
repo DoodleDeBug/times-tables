@@ -8,7 +8,7 @@ const subtitle = document.createElement('div'); // create subtitle
 let subText = subtitle.innerHTML = '2 Times Table';
 
 const questionBox = document.createElement('div'); // create question box
-let question = questionBox.innerHTML = '2x2';
+
 
 const footer = document.createElement('footer'); // create footer
 
@@ -17,10 +17,12 @@ home.setAttribute('src', 'assets/home.svg');
 home.setAttribute('alt', 'Home Icon');
 
 const questionNum = document.createElement('p'); // create q num tracker
-let currentQ = questionNum.innerHTML = '1/12'; // set first q to num 1/12
 
 
-two.addEventListener('click', function startGameTwo(){
+let numbers = Array.from(Array(12).keys(), n => n + 1); // create array 1 to 12
+  // console.log(numbers);
+
+two.addEventListener('click', function createPage(){ // creates the quizpage layout
 
 while (container.firstChild) { // removes all the tiles
     container.removeChild(container.lastChild);
@@ -45,4 +47,28 @@ function goHome(){
 
 footer.appendChild(questionNum) // insert q num
 questionNum.classList.add('questionNum'); // add class to questionNum to apply css
+})
+
+two.addEventListener('click', function startGame(){ // start the game
+
+  let type = Array.from(subText)[0];
+  // console.log(type);
+
+  
+  let random = numbers[Math.floor(Math.random() * numbers.length)];
+  // console.log(random);
+  let q = `What is ${type} x ${random} ?`;
+  // console.log(q);
+  let answer = type * random;
+  // console.log(answer);
+  let question = questionBox.innerHTML = q;
+  let qNum = 1;
+  let currentQ = questionNum.innerHTML = qNum; // set first q to num 1/12
+  for (i = 0; i < numbers.length; i++) {
+
+
+
+    qNum++;
+    console.log(qNum);
+}
 })
