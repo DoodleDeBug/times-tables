@@ -54,15 +54,8 @@ h1 {
 }
 
 .cardTitle {
-  color: white;
   font-family: "Space Mono", monospace;
   font-weight: 100;
-}
-
-.t2 .cardTitle,
-.t9 .cardTitle,
-.t11 .cardTitle {
-  color: slategrey;
 }
 
 .t1 {
@@ -141,6 +134,13 @@ h1 {
   justify-content: center;
   font-family: "Strait", sans-serif;
   font-size: 35px;
+}
+
+.input {
+  width: 200px;
+  height: 50px;
+  align-self: center;
+  background-color: white;
 }
 
 footer {
