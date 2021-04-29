@@ -23,12 +23,9 @@ home.setAttribute("alt", "Home Icon");
 
 const questionNum = document.createElement("p"); // create q num tracker
 let qNum = 1;
-questionNum.innerText = qNum;
 
 let numbers = Array.from(Array(12).keys(), (n) => n + 1); // create array 1 to 12
 // console.log(numbers);
-
-two.addEventListener("click", createPage());
 
 function createPage() {
   // creates the quizpage layout
@@ -62,8 +59,6 @@ function createPage() {
   questionNum.classList.add("questionNum"); // add class to questionNum to apply css
 }
 
-two.addEventListener("click", playRound());
-
 function playRound() {
   // start the game
 
@@ -78,12 +73,17 @@ function playRound() {
   // console.log(answer);
 
   question.innerText = q;
+  questionNum.innerText = qNum;
+  console.log(`you are on question ${qNum} out of 12`);
+  qNum++;
 }
+
+two.addEventListener("click", createPage);
+two.addEventListener("click", playRound);
 
 button.addEventListener("click", function nextQ() {
   let answer = input.value;
   console.log(answer);
   input.value = "";
   playRound();
-  qNum++;
 });
