@@ -123,7 +123,7 @@ h1 {
   justify-content: center;
   text-decoration: none;
   font-size: 25px;
-  padding: 10px;
+  padding: 15px;
 }
 
 .questionBox {
@@ -140,14 +140,14 @@ h1 {
 }
 
 .input {
-  width: 200px;
+  width: 175px;
   height: 50px;
   align-self: center;
   background-color: white;
   font-family: "Strait", sans-serif;
   font-size: 35px;
   color: slategrey;
-  margin-top: 25px;
+  margin-top: 1em;
   border-radius: 30px;
   padding: 15px;
   border-top-style: hidden;
@@ -160,6 +160,15 @@ h1 {
   outline: none;
 }
 
+.button {
+  border: 5px solid white;
+  margin-top: 1em;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-size: 25px;
+  letter-spacing: 4px;
+}
 footer {
   margin-top: auto;
   padding: 20px 50px;

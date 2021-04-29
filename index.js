@@ -7,9 +7,12 @@ const subtitle = document.createElement("div"); // create subtitle
 let subText = (subtitle.innerHTML = "2 Times Table");
 
 const questionBox = document.createElement("div"); // create question box
-const question = document.createElement("div"); // div for q
-const input = document.createElement("input"); // input box
+const question = document.createElement("div"); // create div for q
+const input = document.createElement("input"); // create input box
 input.setAttribute("type", "text");
+const button = document.createElement("div"); // create next button
+button.innerText = "Next";
+button.classList.add("button"); // add class to button to apply css
 
 const footer = document.createElement("footer"); // create footer
 
@@ -40,7 +43,7 @@ two.addEventListener("click", function createPage() {
   questionBox.appendChild(question); // add the q before the input
   input.classList.add("input");
   questionBox.appendChild(input); // add input onto page
-
+  questionBox.appendChild(button); // add button onto questionBox
   body.appendChild(footer); // append footer
 
   footer.appendChild(home); //insert home icon
