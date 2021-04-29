@@ -51,6 +51,7 @@ h1 {
   justify-content: center;
   flex-basis: auto;
   min-width: 300px;
+  cursor: pointer;
 }
 
 .cardTitle {
@@ -166,6 +167,7 @@ footer {
 
 .home {
   height: 50px;
+  cursor: pointer;
 }
 
 .questionNum {
