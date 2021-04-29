@@ -76,6 +76,7 @@ function createResults() {
 }
 
 let q = "";
+let actualAnswer = "";
 
 function playRound() {
   // start the game
@@ -88,17 +89,16 @@ function playRound() {
   q = `${type} x ${random}`;
   let fullQ = `What is ${q}?`;
   // // console.log(q);
-  let actualAnswer = type * random;
-  // // console.log(answer);
+  actualAnswer = type * random;
+  // console.log(actualAnswer);
 
   if (qNum <= 12) {
     question.innerText = fullQ;
     questionNum.innerText = qNum;
-    // console.log(`you are on question ${qNum} out of 12`);
     qNum++;
   } else if (qNum > 12) {
-    createResults();
     console.log("game over");
+    createResults();
   }
 }
 
@@ -109,6 +109,11 @@ button.addEventListener("click", function nextQ() {
   let answer = input.value;
   let fullAns = `${q} = ${answer}`;
   console.log(fullAns);
+  if (answer == actualAnswer) {
+    console.log("correct");
+  } else {
+    console.log("wrong");
+  }
   input.value = "";
   playRound();
 });
