@@ -10,6 +10,7 @@ const questionBox = document.createElement("div"); // create question box
 const question = document.createElement("div"); // create div for q
 const input = document.createElement("input"); // create input box
 input.setAttribute("type", "text");
+input.setAttribute("id", "userInput");
 const button = document.createElement("div"); // create next button
 button.innerText = "Next";
 button.classList.add("button"); // add class to button to apply css
@@ -21,11 +22,15 @@ home.setAttribute("src", "assets/home.svg");
 home.setAttribute("alt", "Home Icon");
 
 const questionNum = document.createElement("p"); // create q num tracker
+let qNum = 1;
+questionNum.innerText = qNum;
 
 let numbers = Array.from(Array(12).keys(), (n) => n + 1); // create array 1 to 12
 // console.log(numbers);
 
-two.addEventListener("click", function createPage() {
+two.addEventListener("click", createPage());
+
+function createPage() {
   // creates the quizpage layout
 
   while (container.firstChild) {
@@ -55,9 +60,11 @@ two.addEventListener("click", function createPage() {
 
   footer.appendChild(questionNum); // insert q num
   questionNum.classList.add("questionNum"); // add class to questionNum to apply css
-});
+}
 
-two.addEventListener("click", function startGame() {
+two.addEventListener("click", playRound());
+
+function playRound() {
   // start the game
 
   let type = Array.from(subText)[0];
@@ -67,16 +74,16 @@ two.addEventListener("click", function startGame() {
   // console.log(random);
   let q = `What is ${type} x ${random} ?`;
   // console.log(q);
-  let answer = type * random;
+  let actualAnswer = type * random;
   // console.log(answer);
-  // let question = (questionBox.innerText = q);
 
   question.innerText = q;
+}
 
-  let qNum = 1;
-  let currentQ = (questionNum.innerText = qNum); // set first q to num 1/12
-  for (i = 0; i < numbers.length; i++) {
-    qNum++;
-    console.log(qNum);
-  }
+button.addEventListener("click", function nextQ() {
+  let answer = input.value;
+  console.log(answer);
+  input.value = "";
+  playRound();
+  qNum++;
 });
