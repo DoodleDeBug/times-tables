@@ -7,7 +7,8 @@ const subtitle = document.createElement("div"); // create subtitle
 let subText = (subtitle.innerHTML = "2 Times Table");
 
 const questionBox = document.createElement("div"); // create question box
-const input = document.createElement("input");
+const question = document.createElement("div"); // div for q
+const input = document.createElement("input"); // input box
 input.setAttribute("type", "text");
 
 const footer = document.createElement("footer"); // create footer
@@ -36,8 +37,9 @@ two.addEventListener("click", function createPage() {
 
   container.appendChild(questionBox); // append question box
   questionBox.classList.add("questionBox", "t2"); // add class to questionbox to apply css
+  questionBox.appendChild(question); // add the q before the input
   input.classList.add("input");
-  container.appendChild(input);
+  questionBox.appendChild(input); // add input onto page
 
   body.appendChild(footer); // append footer
 
@@ -64,7 +66,10 @@ two.addEventListener("click", function startGame() {
   // console.log(q);
   let answer = type * random;
   // console.log(answer);
-  let question = (questionBox.innerText = q);
+  // let question = (questionBox.innerText = q);
+
+  question.innerText = q;
+
   let qNum = 1;
   let currentQ = (questionNum.innerText = qNum); // set first q to num 1/12
   for (i = 0; i < numbers.length; i++) {
