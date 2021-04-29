@@ -188,3 +188,7 @@ footer {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.results_container {
+  flex-direction: column;
+}
