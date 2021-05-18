@@ -67,6 +67,7 @@ function createResults() {
     // removes all the tiles
     container.removeChild(container.lastChild);
   }
+  container.classList.remove("quizpage");
   container.classList.add("results_container"); // add class to main to apply css
 
   container.appendChild(subtitle); // append subtitle
@@ -105,15 +106,36 @@ function playRound() {
 two.addEventListener("click", createPage);
 two.addEventListener("click", playRound);
 
+//gathering results
+
+let results = [];
+
 button.addEventListener("click", function nextQ() {
   let answer = input.value;
   let fullAns = `${q} = ${answer}`;
-  console.log(fullAns);
-  if (answer == actualAnswer) {
-    console.log("correct");
-  } else {
-    console.log("wrong");
+  // console.log(fullAns);
+
+  function mark() {
+    // mark the answer and store it in a variable with full ans and whether correct or not
+    window["q" + qNum] = {
+      ans: fullAns,
+    };
+    if (answer == actualAnswer) {
+      window["q" + qNum].mark = "correct";
+      // console.log("correct");
+    } else {
+      window["q" + qNum].mark = "wrong";
+      // console.log("wrong");
+    }
+
+    // console.log(window["q" + qNum]);
+
+    results.push(window["q" + qNum]);
   }
+
+  mark();
   input.value = "";
   playRound();
 });
+
+console.log(results);
