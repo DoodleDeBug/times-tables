@@ -123,7 +123,7 @@ button.addEventListener("click", function nextQ() {
   playRound();
 });
 
-console.log(results);
+// console.log(results);
 
 function createResults() {
   // results page layout
@@ -133,18 +133,19 @@ function createResults() {
   }
 
   container.classList.remove("quizpage");
-  container.classList.add("results_container"); // add class to main to apply css
+  container.classList.add("results-page"); // add class to main to apply css
 
   container.appendChild(subtitle); // append subtitle
   subtitle.classList.add("subtitle", "t2"); // add class to subtitle to apply css
   subtitle.innerHTML = `${subText} - SCORES`;
   footer.removeChild(questionNum); // remove q num
-
+  const resultsContainer = document.createElement("div");
+  resultsContainer.classList.add("results-container");
+  container.appendChild(resultsContainer);
   for (let i = 0; i < results.length; i++) {
-    for (let key in results[i]) {
-      const div = document.createElement("div");
-      div.innerText = `${results[i][key]}`;
-      container.appendChild(div);
-    }
+    const div = document.createElement("div");
+    div.classList.add("result-tile");
+    div.innerText = `${results[i].ans} ${results[i].mark}`;
+    resultsContainer.appendChild(div);
   }
 }
