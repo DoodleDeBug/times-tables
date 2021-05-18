@@ -61,21 +61,6 @@ function createPage() {
   questionNum.classList.add("questionNum"); // add class to questionNum to apply css
 }
 
-function createResults() {
-  // results page layout
-  while (container.firstChild) {
-    // removes all the tiles
-    container.removeChild(container.lastChild);
-  }
-  container.classList.remove("quizpage");
-  container.classList.add("results_container"); // add class to main to apply css
-
-  container.appendChild(subtitle); // append subtitle
-  subtitle.classList.add("subtitle", "t2"); // add class to subtitle to apply css
-  subtitle.innerHTML = `${subText} - SCORES`;
-  footer.removeChild(questionNum); // remove q num
-}
-
 let q = "";
 let actualAnswer = "";
 
@@ -139,3 +124,27 @@ button.addEventListener("click", function nextQ() {
 });
 
 console.log(results);
+
+function createResults() {
+  // results page layout
+  while (container.firstChild) {
+    // removes all the tiles
+    container.removeChild(container.lastChild);
+  }
+
+  container.classList.remove("quizpage");
+  container.classList.add("results_container"); // add class to main to apply css
+
+  container.appendChild(subtitle); // append subtitle
+  subtitle.classList.add("subtitle", "t2"); // add class to subtitle to apply css
+  subtitle.innerHTML = `${subText} - SCORES`;
+  footer.removeChild(questionNum); // remove q num
+
+  for (let i = 0; i < results.length; i++) {
+    for (let key in results[i]) {
+      const div = document.createElement("div");
+      div.innerText = `${results[i][key]}`;
+      container.appendChild(div);
+    }
+  }
+}
