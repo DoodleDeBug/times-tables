@@ -155,11 +155,21 @@ function createResults() {
   for (let i = 0; i < results.length; i++) {
     const div = document.createElement("div");
     div.classList.add("result-tile");
-    div.innerText = `Question ${results[i].ques - 1}. ${results[i].ans} ${
+    div.innerHTML = `<p> <b>Q${results[i].ques - 1}.</b> ${results[i].ans} ${
       results[i].mark
-    }`;
+    }</p>`;
     resultsContainer.appendChild(div);
   }
+
+  const resultsMessage = document.createElement("div");
+  resultsMessage.classList.add("results-message");
+  container.appendChild(resultsMessage);
+  const score = document.createElement("p");
+  score.innerText = `Your Score: x/12`;
+  resultsMessage.appendChild(score);
+  const msg = document.createElement("p");
+  msg.innerText = `Well Done`;
+  resultsMessage.appendChild(msg);
 
   document.removeEventListener("keypress", enterNext);
 }
