@@ -14,7 +14,7 @@ input.setAttribute("type", "text");
 input.setAttribute("id", "userInput");
 
 const button = document.createElement("div"); // create next button
-button.innerText = "Next";
+button.innerText = "Press Enter To Continue";
 button.classList.add("button"); // add class to button to apply css
 
 const footer = document.createElement("footer"); // create footer
@@ -103,8 +103,6 @@ two.addEventListener("click", playRound);
 //gathering results
 
 let results = [];
-
-// button.addEventListener("click", nextQ);
 
 function nextQ() {
   let answer = input.value;

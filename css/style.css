@@ -167,14 +167,11 @@ h1 {
 }
 
 .button {
-  border: 5px solid white;
-  margin-top: 1em;
-  cursor: pointer;
-  padding: 10px 15px;
-  border-radius: 30px;
-  font-size: 25px;
-  letter-spacing: 4px;
+  margin-top: 40px;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
+
 footer {
   margin-top: auto;
   padding: 20px 50px;
@@ -209,12 +206,9 @@ footer {
 }
 
 .result-tile {
-  border-radius: 35px;
   height: 50px;
   width: 200px;
   margin: 10px 5px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: yellowgreen;
 }
