@@ -33,6 +33,12 @@ function goHome() {
   location.href = "./index.html"; // home button takes you back to index.html w/out js applied yet
 }
 
+let enterNext = function (e) {
+  if (e.key === "Enter") {
+    nextQ();
+  }
+};
+
 function createPage() {
   // creates the quizpage layout
 
@@ -63,11 +69,7 @@ function createPage() {
   footer.appendChild(questionNum); // insert q num
   questionNum.classList.add("questionNum"); // add class to questionNum to apply css
 
-  document.addEventListener("keypress", function (e) {
-    if (e.key === "Enter") {
-      nextQ();
-    }
-  });
+  document.addEventListener("keypress", enterNext);
 }
 
 let q = "";
@@ -153,7 +155,11 @@ function createResults() {
   for (let i = 0; i < results.length; i++) {
     const div = document.createElement("div");
     div.classList.add("result-tile");
-    div.innerText = `Question ${results[i].ques}. ${results[i].ans} ${results[i].mark}`;
+    div.innerText = `Question ${results[i].ques - 1}. ${results[i].ans} ${
+      results[i].mark
+    }`;
     resultsContainer.appendChild(div);
   }
+
+  document.removeEventListener("keypress", enterNext);
 }
