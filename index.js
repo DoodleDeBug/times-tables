@@ -111,6 +111,7 @@ function nextQ() {
   function mark() {
     // mark the answer and store it in a variable with full ans and whether correct or not
     window["q" + qNum] = {
+      ques: qNum,
       ans: fullAns,
     };
     if (answer == actualAnswer) {
@@ -152,7 +153,7 @@ function createResults() {
   for (let i = 0; i < results.length; i++) {
     const div = document.createElement("div");
     div.classList.add("result-tile");
-    div.innerText = `${results[i].ans} ${results[i].mark}`;
+    div.innerText = `Question ${results[i].ques}. ${results[i].ans} ${results[i].mark}`;
     resultsContainer.appendChild(div);
   }
 }

@@ -206,9 +206,9 @@ footer {
 }
 
 .result-tile {
-  height: 50px;
-  width: 200px;
-  margin: 10px 5px;
+  width: 300px;
+  padding: 2px;
+  margin: 10px 10px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
