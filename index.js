@@ -1,5 +1,7 @@
+// get all the quiz tiles
 const two = document.querySelector(".t2");
 
+//get main body bits
 const container = document.querySelector("#flex-container"); // aka main
 const body = document.querySelector("body");
 
@@ -105,6 +107,7 @@ two.addEventListener("click", playRound);
 //gathering results
 
 let results = [];
+let scores = 0;
 
 function nextQ() {
   let answer = input.value;
@@ -118,6 +121,7 @@ function nextQ() {
     };
     if (answer == actualAnswer) {
       window["q" + qNum].mark = "correct";
+      scores++;
       // console.log("correct");
     } else {
       window["q" + qNum].mark = "wrong";
@@ -165,7 +169,7 @@ function createResults() {
   resultsMessage.classList.add("results-message");
   container.appendChild(resultsMessage);
   const score = document.createElement("p");
-  score.innerText = `Your Score: x/12`;
+  score.innerText = `Your Score: ${scores}/12`;
   resultsMessage.appendChild(score);
   const msg = document.createElement("p");
   msg.innerText = `Well Done`;
@@ -173,3 +177,6 @@ function createResults() {
 
   document.removeEventListener("keypress", enterNext);
 }
+
+const goodMsg = "Well Done!";
+const badMsg = "You Need To Revise!";
