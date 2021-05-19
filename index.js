@@ -93,7 +93,7 @@ function playRound() {
 
   if (qNum <= 12) {
     question.innerText = fullQ;
-    questionNum.innerText = qNum;
+    questionNum.innerText = `${qNum}/12`;
     qNum++;
   } else if (qNum > 12) {
     console.log("game over");
