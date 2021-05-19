@@ -12,6 +12,7 @@ const question = document.createElement("div"); // create div for q
 const input = document.createElement("input"); // create input box
 input.setAttribute("type", "text");
 input.setAttribute("id", "userInput");
+
 const button = document.createElement("div"); // create next button
 button.innerText = "Next";
 button.classList.add("button"); // add class to button to apply css
@@ -49,7 +50,9 @@ function createPage() {
   questionBox.classList.add("questionBox", "t2"); // add class to questionbox to apply css
   questionBox.appendChild(question); // add the q before the input
   input.classList.add("input");
+
   questionBox.appendChild(input); // add input onto page
+
   questionBox.appendChild(button); // add button onto questionBox
   body.appendChild(footer); // append footer
 
@@ -59,6 +62,12 @@ function createPage() {
 
   footer.appendChild(questionNum); // insert q num
   questionNum.classList.add("questionNum"); // add class to questionNum to apply css
+
+  document.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      nextQ();
+    }
+  });
 }
 
 let q = "";
@@ -95,11 +104,12 @@ two.addEventListener("click", playRound);
 
 let results = [];
 
-button.addEventListener("click", function nextQ() {
+// button.addEventListener("click", nextQ);
+
+function nextQ() {
   let answer = input.value;
   let fullAns = `${q} = ${answer}`;
   // console.log(fullAns);
-
   function mark() {
     // mark the answer and store it in a variable with full ans and whether correct or not
     window["q" + qNum] = {
@@ -121,8 +131,7 @@ button.addEventListener("click", function nextQ() {
   mark();
   input.value = "";
   playRound();
-});
-
+}
 // console.log(results);
 
 function createResults() {
