@@ -1,5 +1,16 @@
 // ****************get all the quiz tiles
 const two = document.querySelector(".t2");
+const three = document.querySelector(".t3");
+const four = document.querySelector(".t4");
+const five = document.querySelector(".t5");
+const six = document.querySelector(".t6");
+const seven = document.querySelector(".t7");
+const eight = document.querySelector(".t8");
+const nine = document.querySelector(".t9");
+const ten = document.querySelector(".t10");
+const eleven = document.querySelector(".t11");
+const twelve = document.querySelector(".t12");
+const rando = document.querySelector(".t1");
 
 //get main body bits
 const container = document.querySelector("#flex-container"); // aka main
@@ -17,6 +28,46 @@ home.addEventListener("click", goHome);
 two.addEventListener("click", getTable);
 two.addEventListener("click", createPage);
 two.addEventListener("click", playRound);
+
+three.addEventListener("click", getTable);
+three.addEventListener("click", createPage);
+three.addEventListener("click", playRound);
+
+four.addEventListener("click", getTable);
+four.addEventListener("click", createPage);
+four.addEventListener("click", playRound);
+
+five.addEventListener("click", getTable);
+five.addEventListener("click", createPage);
+five.addEventListener("click", playRound);
+
+six.addEventListener("click", getTable);
+six.addEventListener("click", createPage);
+six.addEventListener("click", playRound);
+
+seven.addEventListener("click", getTable);
+seven.addEventListener("click", createPage);
+seven.addEventListener("click", playRound);
+
+eight.addEventListener("click", getTable);
+eight.addEventListener("click", createPage);
+eight.addEventListener("click", playRound);
+
+nine.addEventListener("click", getTable);
+nine.addEventListener("click", createPage);
+nine.addEventListener("click", playRound);
+
+ten.addEventListener("click", getTable);
+ten.addEventListener("click", createPage);
+ten.addEventListener("click", playRound);
+
+eleven.addEventListener("click", getTable);
+eleven.addEventListener("click", createPage);
+eleven.addEventListener("click", playRound);
+
+twelve.addEventListener("click", getTable);
+twelve.addEventListener("click", createPage);
+twelve.addEventListener("click", playRound);
 
 //*************things i cant put in create-page coz of scope issues
 const subtitle = document.createElement("div"); // create subtitle
@@ -54,8 +105,12 @@ let enterNext = function (e) {
 
 function getTable(e) {
   subText = e.target.innerText;
-  console.log(subText);
-  tableClass = Array.from(subText)[0];
+
+  if (Array.from(subText).length > 13) {
+    tableClass = Array.from(subText).slice(0, 2).join("");
+  } else {
+    tableClass = Array.from(subText)[0];
+  }
 }
 
 function createPage() {
