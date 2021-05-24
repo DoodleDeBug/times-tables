@@ -17,7 +17,7 @@ home.addEventListener("click", goHome);
 two.addEventListener("click", createPage);
 two.addEventListener("click", playRound);
 
-//*************things i cant put in create page coz of scope issues
+//*************things i cant put in create-page coz of scope issues
 const subtitle = document.createElement("div"); // create subtitle
 const question = document.createElement("div"); // create div for q
 const input = document.createElement("input"); // create input box
@@ -32,8 +32,11 @@ let actualAnswer = "";
 let results = [];
 let scores = 0;
 
+//****variables */
 const goodMsg = "Well Done!";
 const badMsg = "You Need To Revise!";
+const correct = `<img src="./assets/tick.svg" alt="Correct" class="tick">`;
+const incorrect = `<img src="./assets/cross.svg" alt="Incorrect" class="cross">`;
 
 //***************************FUNCTIONS
 function goHome() {
@@ -122,10 +125,10 @@ function nextQ() {
       ans: fullAns,
     };
     if (answer == actualAnswer) {
-      window["q" + qNum].mark = "correct";
+      window["q" + qNum].mark = correct;
       scores++;
     } else {
-      window["q" + qNum].mark = "wrong";
+      window["q" + qNum].mark = incorrect;
     }
     results.push(window["q" + qNum]);
   }
