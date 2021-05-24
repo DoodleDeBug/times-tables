@@ -13,7 +13,8 @@ home.setAttribute("alt", "Home Icon");
 home.classList.add("home"); // add class to home to apply css
 home.addEventListener("click", goHome);
 
-// game
+// game/ add event listeners to all tiles
+two.addEventListener("click", getTable);
 two.addEventListener("click", createPage);
 two.addEventListener("click", playRound);
 
@@ -31,6 +32,8 @@ let q = "";
 let actualAnswer = "";
 let results = [];
 let scores = 0;
+let subText;
+let tableClass;
 
 //****variables */
 const goodMsg = "Well Done!";
@@ -49,6 +52,12 @@ let enterNext = function (e) {
   }
 };
 
+function getTable(e) {
+  subText = e.target.innerText;
+  console.log(subText);
+  tableClass = Array.from(subText)[0];
+}
+
 function createPage() {
   // creates the quizpage layout
 
@@ -59,14 +68,13 @@ function createPage() {
 
   container.classList.add("quizpage"); // add class to main to apply css
 
-  subText = "2 Times Table";
   subtitle.innerHTML = subText;
   container.appendChild(subtitle); // append subtitle
-  subtitle.classList.add("subtitle", "t2"); // add class to subtitle to apply css
+  subtitle.classList.add("subtitle", `t${tableClass}`); // add class to subtitle to apply css
 
   const questionBox = document.createElement("div"); // create question box
   container.appendChild(questionBox); // append question box
-  questionBox.classList.add("questionBox", "t2"); // add class to questionbox to apply css
+  questionBox.classList.add("questionBox", `t${tableClass}`); // add class to questionbox to apply css
   questionBox.appendChild(question); // add the q before the input
 
   input.setAttribute("type", "text");
@@ -91,14 +99,12 @@ function createPage() {
 function playRound() {
   // start the game
 
-  let type = Array.from(subText)[0];
-
   let random = numbers[Math.floor(Math.random() * numbers.length)];
 
-  q = `${type} x ${random}`;
+  q = `${tableClass} x ${random}`;
   let fullQ = `What is ${q}?`;
 
-  actualAnswer = type * random;
+  actualAnswer = tableClass * random;
 
   if (qNum <= 12) {
     question.innerText = fullQ;
@@ -145,7 +151,7 @@ function createResults() {
   container.classList.add("results-page"); // add class to main to apply css
 
   container.appendChild(subtitle); // append subtitle
-  subtitle.classList.add("subtitle", "t2"); // add class to subtitle to apply css
+  subtitle.classList.add("subtitle", `t${tableClass}`); // add class to subtitle to apply css
   subtitle.innerHTML = `${subText} - SCORES`;
 
   footer.removeChild(questionNum); // remove q num
