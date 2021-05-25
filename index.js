@@ -159,26 +159,30 @@ function playRound() {
 
 //gathering results of each answer
 function nextQ() {
-  let answer = input.value;
-  let fullAns = `${q} = ${answer}`;
+  if (input.value == "") {
+    alert("You must enter an answer");
+  } else {
+    let answer = input.value;
+    let fullAns = `${q} = ${answer}`;
 
-  input.value = "";
-  mark();
-  playRound();
+    input.value = "";
+    mark();
+    playRound();
 
-  function mark() {
-    // mark the answer and store it in a variable with full ans and whether correct or not
-    window["q" + qNum] = {
-      ques: qNum,
-      ans: fullAns,
-    };
-    if (answer == actualAnswer) {
-      window["q" + qNum].mark = correct;
-      scores++;
-    } else {
-      window["q" + qNum].mark = incorrect;
+    function mark() {
+      // mark the answer and store it in a variable with full ans and whether correct or not
+      window["q" + qNum] = {
+        ques: qNum,
+        ans: fullAns,
+      };
+      if (answer == actualAnswer) {
+        window["q" + qNum].mark = correct;
+        scores++;
+      } else {
+        window["q" + qNum].mark = incorrect;
+      }
+      results.push(window["q" + qNum]);
     }
-    results.push(window["q" + qNum]);
   }
 }
 
@@ -219,7 +223,7 @@ function createResults() {
   resultsMessage.appendChild(score);
 
   const msg = document.createElement("p");
-  scores > 5 ? (msg.innerText = goodMsg) : (msg.innerText = badMsg);
+  scores > 6 ? (msg.innerText = goodMsg) : (msg.innerText = badMsg);
   resultsMessage.appendChild(msg);
 
   document.removeEventListener("keypress", enterNext);
