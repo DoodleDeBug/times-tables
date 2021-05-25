@@ -1,73 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Potta+One&family=Space+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Strait&display=swap');
+/* results page styles */
 
-* {
-    margin: 0;
-    padding: 0;
+.results-page {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 50px 0;
 }
 
-html{
-    min-height: 100%;
+.results-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 10% 0;
 }
 
-body{
-    box-sizing: border-box;
-    font-family: 'Space Mono', monospace;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+.result-tile {
+  width: 370px;
+  padding: 5px;
+  margin: 10px 20px;
+  display: flex;
+  align-items: flex-start;
+  color: slategray;
+  font-size: 25px;
 }
 
-main {
-    padding: 5% 250px;
-    text-align: center;
-    overflow:auto;
+.result-tile > p {
+  display: flex;
+  align-items: center;
+}
+.results-message {
+  padding: 5px;
+  margin-top: 1em;
+  background: -webkit-linear-gradient(10deg, #ff922d, #ff4bb4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 25px;
 }
 
-h1 {
-    text-align: center;
-    font-family: 'Potta One', cursive;
-    font-size: 50px;
-    margin-top: 50px;
-    background: -webkit-linear-gradient(10deg,#FF922D, #ff4bb4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-h2 {
-    font-weight: normal;
-}
-.sub-border{
-    background-color: grey;
-    border-radius: 30px;  
-}
-
-.subtitle {
-    border-radius: 30px;
-    height: 50px;
-    margin: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
-
-.flex-container {
-    background-color: teal;
-    display: flex;
-    font-family: 'Strait', sans-serif;
-}
-
-.comments {
-    background-color: tomato;
-    font-family: 'Space Mono', monospace;
-    margin-top: 50px;
-}
-
-footer {
-    margin-top: auto;
-    padding: 20px 50px;
-   }
-
-.home {
-    height: 50px;
+.tick,
+.cross {
+  height: 50px;
+  margin-left: 20px;
 }

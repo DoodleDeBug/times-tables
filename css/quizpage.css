@@ -1,76 +1,60 @@
-@import url("https://fonts.googleapis.com/css2?family=Potta+One&family=Space+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Strait&display=swap");
+/* quizpage styles */
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  min-height: 100%;
-}
-
-body {
-  box-sizing: border-box;
-  font-family: "Space Mono", monospace;
-  min-height: 100vh;
-  display: flex;
+.quizpage {
   flex-direction: column;
 }
 
-main {
-  padding: 5% 250px;
-  text-align: center;
-  overflow: auto;
-}
-
-h1 {
-  text-align: center;
-  font-family: "Potta One", cursive;
-  font-size: 50px;
-  margin-top: 50px;
-  background: -webkit-linear-gradient(10deg, #ff922d, #ff4bb4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-h2 {
-  font-weight: normal;
-}
-
-.sub-border {
-  background-color: grey;
-  border-radius: 30px;
-}
-
 .subtitle {
-  background-color: grey;
   border-radius: 30px;
   height: 50px;
-  margin: 30px;
+  margin: 0 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-}
-
-.border {
-  background-color: grey;
-  border-radius: 30px;
-  margin: 30px 25%;
-  padding: 20px;
+  font-size: 25px;
+  padding: 15px;
+  min-width: 460px;
 }
 
 .questionBox {
   margin: 30px 25%;
   padding: 20px;
-  background-color: grey;
   border-radius: 30px;
   height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Strait", sans-serif;
+  font-size: 35px;
+  flex-direction: column;
+}
+
+.input {
+  width: 175px;
+  height: 50px;
+  align-self: center;
+  background-color: white;
+  font-family: "Strait", sans-serif;
+  font-size: 35px;
+  color: slategrey;
+  margin-top: 1em;
+  border-radius: 30px;
+  padding: 15px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.button {
+  margin-top: 40px;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
 footer {
@@ -80,6 +64,7 @@ footer {
 
 .home {
   height: 50px;
+  cursor: pointer;
 }
 
 .questionNum {
@@ -87,4 +72,7 @@ footer {
   float: right;
   font-size: 40px;
   font-family: "Space Mono", monospace;
+  background: -webkit-linear-gradient(10deg, #ff922d, #ff4bb4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
