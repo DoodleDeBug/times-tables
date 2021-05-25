@@ -25,49 +25,26 @@ home.classList.add("home"); // add class to home to apply css
 home.addEventListener("click", goHome);
 
 // game/ add event listeners to all tiles
-two.addEventListener("click", getTable);
-two.addEventListener("click", createPage);
-two.addEventListener("click", playRound);
+const tableList = [
+  two,
+  three,
+  four,
+  five,
+  six,
+  seven,
+  eight,
+  nine,
+  ten,
+  eleven,
+  twelve,
+  rando,
+];
 
-three.addEventListener("click", getTable);
-three.addEventListener("click", createPage);
-three.addEventListener("click", playRound);
-
-four.addEventListener("click", getTable);
-four.addEventListener("click", createPage);
-four.addEventListener("click", playRound);
-
-five.addEventListener("click", getTable);
-five.addEventListener("click", createPage);
-five.addEventListener("click", playRound);
-
-six.addEventListener("click", getTable);
-six.addEventListener("click", createPage);
-six.addEventListener("click", playRound);
-
-seven.addEventListener("click", getTable);
-seven.addEventListener("click", createPage);
-seven.addEventListener("click", playRound);
-
-eight.addEventListener("click", getTable);
-eight.addEventListener("click", createPage);
-eight.addEventListener("click", playRound);
-
-nine.addEventListener("click", getTable);
-nine.addEventListener("click", createPage);
-nine.addEventListener("click", playRound);
-
-ten.addEventListener("click", getTable);
-ten.addEventListener("click", createPage);
-ten.addEventListener("click", playRound);
-
-eleven.addEventListener("click", getTable);
-eleven.addEventListener("click", createPage);
-eleven.addEventListener("click", playRound);
-
-twelve.addEventListener("click", getTable);
-twelve.addEventListener("click", createPage);
-twelve.addEventListener("click", playRound);
+for (let i = 0; i < tableList.length; i++) {
+  tableList[i].addEventListener("click", getTable);
+  tableList[i].addEventListener("click", createPage);
+  tableList[i].addEventListener("click", playRound);
+}
 
 //*************things i cant put in create-page coz of scope issues
 const subtitle = document.createElement("div"); // create subtitle
