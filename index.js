@@ -37,6 +37,7 @@ const tableList = [
   ten,
   eleven,
   twelve,
+  rando,
 ];
 
 for (let i = 0; i < tableList.length; i++) {
@@ -82,7 +83,9 @@ let enterNext = function (e) {
 function getTable(e) {
   subText = e.target.innerText;
 
-  if (Array.from(subText).length > 13) {
+  if (subText == "Random Quiz") {
+    tableClass = 1;
+  } else if (Array.from(subText).length > 13) {
     tableClass = Array.from(subText).slice(0, 2).join("");
   } else {
     tableClass = Array.from(subText)[0];
@@ -131,11 +134,19 @@ function playRound() {
   // start the game
 
   let random = numbers[Math.floor(Math.random() * numbers.length)];
+  let random2 = numbers[Math.floor(Math.random() * numbers.length)];
 
-  q = `${tableClass} x ${random}`;
+  if (tableClass == 1) {
+    q = `${random} x ${random2}`;
+    actualAnswer = random * random2;
+  } else {
+    q = `${tableClass} x ${random}`;
+    actualAnswer = tableClass * random;
+  }
+
   let fullQ = `What is ${q}?`;
 
-  actualAnswer = tableClass * random;
+  // actualAnswer = tableClass * random;
 
   if (qNum <= 12) {
     question.innerText = fullQ;

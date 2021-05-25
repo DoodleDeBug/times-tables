@@ -15,7 +15,7 @@
 }
 
 .result-tile {
-  width: 310px;
+  width: 320px;
   padding: 5px;
   margin: 10px 25px;
   display: flex;
@@ -26,6 +26,7 @@
 .result-tile > p {
   display: flex;
   align-items: center;
+  margin: 0 auto;
 }
 .results-message {
   padding: 5px;
