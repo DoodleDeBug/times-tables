@@ -37,7 +37,6 @@ const tableList = [
   ten,
   eleven,
   twelve,
-  rando,
 ];
 
 for (let i = 0; i < tableList.length; i++) {

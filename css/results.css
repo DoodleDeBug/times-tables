@@ -15,11 +15,10 @@
 }
 
 .result-tile {
-  width: 370px;
+  width: 310px;
   padding: 5px;
-  margin: 10px 20px;
+  margin: 10px 25px;
   display: flex;
-  align-items: flex-start;
   color: slategray;
   font-size: 25px;
 }
