@@ -11,6 +11,7 @@ desc: Simple times table game for kids. This is the first thing I've made all on
 ## Things to improve:
 * Code could probably still be cleaner yet
 * It took me a while because I wasn't doing it consistently, so I need to have a better coding routine
+* TODO: change colour of home button
 
 ### UI
 
