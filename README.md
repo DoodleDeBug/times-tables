@@ -2,6 +2,8 @@
 
 desc: Simple times table game for kids. This is the first thing I've made all on my own, not following any tutorial or as part of any course.
 
+I really enjoy things in the realm of 'edutainment' and will be participating in TOPs game-jam soon so hopefully get to make more things like this (and better obviously)
+
 ## What went well:
 * I got to really practice and improve on my DOM manipulation skills
 * I tried to keep my code DRY and fairly clean, I'm sure it can still be improved but definitely better than some of my earlier stuff
