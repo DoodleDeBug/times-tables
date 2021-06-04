@@ -64,6 +64,7 @@ let subText;
 let tableClass;
 
 //****variables */
+const perfect = "You got full marks! You are amazing!!!! Well Done!";
 const goodMsg = "Well Done!";
 const badMsg = "You Need To Revise!";
 const correct = `<img src="./assets/tick.svg" alt="Correct" class="tick">`;
@@ -223,6 +224,7 @@ function createResults() {
   resultsMessage.appendChild(score);
 
   const msg = document.createElement("p");
+  scores == 12 ? (msg.innerText = perfect) : null;
   scores > 6 ? (msg.innerText = goodMsg) : (msg.innerText = badMsg);
   resultsMessage.appendChild(msg);
 
