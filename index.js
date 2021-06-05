@@ -224,8 +224,8 @@ function createResults() {
   resultsMessage.appendChild(score);
 
   const msg = document.createElement("p");
-  scores == 12 ? (msg.innerText = perfect) : null;
   scores > 6 ? (msg.innerText = goodMsg) : (msg.innerText = badMsg);
+  scores == 12 ? (msg.innerText = perfect) : null;
   resultsMessage.appendChild(msg);
 
   document.removeEventListener("keypress", enterNext);
