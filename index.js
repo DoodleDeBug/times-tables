@@ -160,8 +160,11 @@ function playRound() {
 
 //gathering results of each answer
 function nextQ() {
+  let reg = /^(?:[1-9]\d*|\d)$/;
   if (input.value == "") {
     alert("You must enter an answer");
+  } else if (!reg.test(input.value)) {
+    alert("You must enter a number");
   } else {
     let answer = input.value;
     let fullAns = `${q} = ${answer}`;
